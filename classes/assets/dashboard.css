@@ -1,0 +1,138 @@
+/* Reset & base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/todo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+}
+/* Header Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 255, 200, 0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffc8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ffc8;
+}
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1000px;
+  margin: 130px auto 40px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.15);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  color: white;
+}
+
+/* Welcome Message */
+.dashboard-container .welcome-card h1 {
+  font-size: 36px;
+  color: #00ffc8;
+  margin-bottom: 10px;
+}
+
+.dashboard-container .welcome-card p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  flex: 1;
+  min-width: 200px;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-box h2 {
+  font-size: 40px;
+  color: #00ffc8;
+}
+
+.stat-box p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* Dashboard Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn.dash-btn {
+  padding: 12px 24px;
+  background-color: #00ffc8;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.dash-btn:hover {
+  background-color: #00c0a8;
+}

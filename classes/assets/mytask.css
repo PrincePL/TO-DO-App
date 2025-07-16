@@ -1,0 +1,104 @@
+/* Reset & base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;  
+  flex-direction: column;
+  /* min-height: 100vh; */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/todo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+}
+/* Header Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 255, 200, 0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffc8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ffc8;
+}
+/* Dashboard Container */
+.task-container {
+  margin-top: 120px; /* This creates space from top (header) */
+  padding: 40px 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+.task-container h1 {
+  text-align: center;
+  color: #00ffc8;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+table th,
+table td {
+  border: 1px solid #555;
+  padding: 12px;
+  text-align: center;
+}
+
+table th {
+  background-color: #00ffc8;
+  color: black;
+}
+
+table td a {
+  color: #00ffc8;
+  text-decoration: none;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
